@@ -1,4 +1,4 @@
-let { MessageType } = require('@adiwajshing/baileys')
+let { MessageType } = require('@adiwajshing/baileys-md')
 //process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 const { servers, yta, ytv } = require('../lib/y2mate')
 let yts = require('yt-search')
