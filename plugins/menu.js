@@ -14,17 +14,17 @@ let tags = {
 }
 const defaultMenu = {
   before: `
- Hai, %name!
+ Hai, 👋 %name! have a nice day!
 
-❏ limit: *%limit Limit*
-❏ Role: *%role*
-❏ Level: *%level*
-❏ Exp: %totalexp XP in Total
-❏ Tanggal: *%week %weton, %date*
-❏ Tanggal Islam: *%dateIslamic*
-❏ Waktu: *%time*
-❏ Uptime: *%uptime (%muptime)*
-❏ Database: %rtotalreg of %totalreg
+ 🧱 limit: *%limit Limit*
+ 🦸🏼‍♂️ Role: *%role*
+ 🔼 Level: *%level*
+ 💫 Exp: %totalexp XP in Total
+ 📅 Tanggal: *%week %weton, %date*
+ ☪️ Tanggal Islam: *%dateIslamic*
+ 📈 Waktu: *%time*
+ ⏰ Uptime: *%uptime (%muptime)*
+ 📁 Database: %rtotalreg of %totalreg
 
       𝓢𝓲𝓶𝓹𝓵𝓮 𝓦𝓱𝓪𝓽𝓼𝓪𝓹𝓹 𝓫𝓸𝓽 ❤️
 
