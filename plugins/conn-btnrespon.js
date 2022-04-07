@@ -1,4 +1,6 @@
-const { MessageType, newMessagesDB } = require("@adiwajshing/baileys-md")
+//const { MessageType, newMessagesDB } = require("@adiwajshing/baileys-md")
+//const util = require('util')
+const { proto, generateWAMessage,  areJidsSameUser } = require('@adiwajshing/baileys-md')
 //const util = require('util')
 
 module.exports = {
