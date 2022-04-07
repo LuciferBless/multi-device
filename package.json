@@ -22,16 +22,16 @@
     "whatsapp",
     "js-whatsapp"
   ],
-  "homepage": "https://github.com/inirey/whatsapp-bot",
+  "homepage": "https://github.com/inirey/multi-device",
   "author": {
     "name": "skh"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/inirey/whatsapp-bot.git"
+    "url": "git+https://github.com/inirey/multi-device.git"
   },
   "bugs": {
-    "url": "https://github.com/inirey/whatsapp-bot/issues"
+    "url": "https://github.com/inirey/multi-device/issues"
   },
   "license": "GPL-3.0-or-later",
   "dependencies": {
