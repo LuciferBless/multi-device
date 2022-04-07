@@ -1,8 +1,20 @@
 require('./config')
 const {
-  useSingleFileAuthState,
-  DisconnectReason
-} = require('@adiwajshing/baileys-md')
+	default: makeWASocket,
+	DisconnectReason,
+	AnyMessageContent,
+	delay,
+	useSingleFileAuthState,
+	generateForwardMessageContent,
+	prepareWAMessageMedia,
+	generateWAMessageFromContent,
+	generateMessageID,
+	downloadContentFromMessage,
+	makeInMemoryStore,
+	fetchLatestBaileysVersion,
+	jidDecode,
+	proto
+} = require('@adiwajshing/baileys')
 const WebSocket = require('ws')
 const path = require('path')
 const fs = require('fs')
@@ -11,7 +23,7 @@ const cp = require('child_process')
 const _ = require('lodash')
 const syntaxerror = require('syntax-error')
 const P = require('pino')
-const os = require('os')
+const os = require('os') 
 let simple = require('./lib/simple')
 var low
 try {
