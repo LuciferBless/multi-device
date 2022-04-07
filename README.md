@@ -14,7 +14,7 @@
  
 </div>
 
-### Install
+### TERMUX USERS
 
 ```bash
 > git clone https://github.com/inirey/muti-device
@@ -25,12 +25,12 @@
 
 ## USERS WINDOWS/VPS/RDP
 
-```bash
+
 * Instal Git [`click here`](https://git-scm.com/downloads)
 * Instal NodeJS [`click here`](https://nodejs.org/en/download)
 * Instal FFmpeg [`click here`](https://ffmpeg.org/download.html)
 * Instal ImageMagick [`click here`](https://imagemagick.org/script/download.php)
-```
+
 
 ## 🙏 Thanks to
 * <a href="https://github.com/adiwajshing/Baileys"><img alt="GitHub" src="https://img.shields.io/badge/@adiwajshing/Baileys%20-%23121011.svg?style=flat-square&logo=npm&color=white"/></a>
