@@ -1,6 +1,6 @@
 const { spawn } = require('child_process')
 const util = require('util')
-const { MessageType } = require('@adiwajshing/baileys')
+const { MessageType } = require('@adiwajshing/baileys-md')
 
 let handler = async (m, { conn }) => {
   if (!global.support.convert &&
