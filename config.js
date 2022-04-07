@@ -1,3 +1,5 @@
+const fs = require('fs')
+
 global.owner = ['0', '0', '0']
 global.mods = []
 global.prems = []
