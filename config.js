@@ -1,6 +1,3 @@
-let fs = require('fs')
-let chalk = require('chalk')
-
 global.owner = ['0', '0', '0']
 global.mods = []
 global.prems = []
