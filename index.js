@@ -4,15 +4,15 @@ let path = require('path')
 let fs = require('fs')
 let package = require('./package.json')
 const CFonts  = require('cfonts')
-CFonts.say('SEKHA', {
-  colors: ['#f2aa4c'],
+CFonts.say('SEKHA\nMD', {
+  colors: ['#00FFFF'],
   font: 'block',
   align: 'center',
 })
-CFonts.say(`'${package.name}' By @${package.author.name || package.author}`, {
-  font: 'console',
+CFonts.say(`Created By @_sekhaa`, {
+  colors: ['#00FFFF'],
+  font: 'block',
   align: 'center',
-  gradient: ['red', 'magenta']
 })
 
 var isRunning = false
