@@ -11,7 +11,7 @@ CFonts.say('SEKHA\nMD', {
 })
 CFonts.say(`Created By @_sekhaa`, {
   colors: ['#00FFFF'],
-  font: 'block',
+  font: 'console',
   align: 'center',
 })
 
