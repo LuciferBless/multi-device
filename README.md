@@ -31,6 +31,9 @@
 * Instal FFmpeg [`click here`](https://ffmpeg.org/download.html)
 * Instal ImageMagick [`click here`](https://imagemagick.org/script/download.php)
 
+## :fire: Tambahan
+
+script ini masih dalam tahap perkembangan Jika ada yg ingin di tanyakan silahkan join group atau open issue bila terjadi erorr dll terimakasih
 
 ## 🙏 Thanks to
 * <a href="https://github.com/adiwajshing/Baileys"><img alt="GitHub" src="https://img.shields.io/badge/@adiwajshing/Baileys%20-%23121011.svg?style=flat-square&logo=npm&color=white"/></a>
