@@ -1,19 +1,13 @@
 require('./config')
 const {
-	default: makeWASocket,
-	DisconnectReason,
-	AnyMessageContent,
-	delay,
-	useSingleFileAuthState,
-	generateForwardMessageContent,
-	prepareWAMessageMedia,
-	generateWAMessageFromContent,
-	generateMessageID,
-	downloadContentFromMessage,
-	makeInMemoryStore,
-	fetchLatestBaileysVersion,
-	jidDecode,
-	proto
+	
+    useMultiFileAuthState,
+    DisconnectReason,
+    makeWASocket, 
+    protoType, 
+    serialize,
+    fetchLatestBaileysVersion 
+	
 } = require('@adiwajshing/baileys')
 const WebSocket = require('ws')
 const path = require('path')
@@ -78,63 +72,6 @@ loadDatabase()
 global.authFile = `${opts._[0] || 'session'}.data.json`
 global.isInit = !fs.existsSync(authFile)
 const { state, saveState } = useSingleFileAuthState(global.authFile)
-
-const connectionOptions = {
-  printQRInTerminal: true,
-  auth: state,
-  logger: P({ level: 'debug' })
-}
-
-global.conn = simple.makeWASocket(connectionOptions)
-
-if (!opts['test']) {
-  if (global.db) setInterval(async () => {
-    if (global.db.data) await global.db.write()
-    if (opts['autocleartmp'] && (global.support || {}).find) (tmp = [os.tmpdir(), 'tmp'], tmp.forEach(filename => cp.spawn('find', [filename, '-amin', '3', '-type', 'f', '-delete'])))
-  }, 30 * 1000)
-}
-if (opts['server']) require('./server')(global.conn, PORT)
-
-async function connectionUpdate(update) {
-  const { connection, lastDisconnect } = update
-  global.timestamp.connect = new Date
-  if (lastDisconnect && lastDisconnect.error && lastDisconnect.error.output && lastDisconnect.error.output.statusCode !== DisconnectReason.loggedOut && conn.ws.readyState !== WebSocket.CONNECTING) {
-   // console.log(global.reloadHandler(true))
-  }
-  if (global.db.data == null) await loadDatabase()
- // console.log(JSON.stringify(update, null, 4))
-}
-
-
-process.on('uncaughtException', console.error)
-// let strQuot = /(["'])(?:(?=(\\?))\2.)*?\1/
-
-const imports = (path) => {
-  path = require.resolve(path)
-  let modules, retry = 0
-  do {
-    if (path in require.cache) delete require.cache[path]
-    modules = require(path)
-    retry++
-  } while ((!modules || (Array.isArray(modules) || modules instanceof String) ? !(modules || []).length : typeof modules == 'object' && !Buffer.isBuffer(modules) ? !(Object.keys(modules || {})).length : true) && retry <= 10)
-  return modules
-}
-let isInit = true
-global.reloadHandler = function (restatConn) {
-  let handler = imports('./handler')
-  if (restatConn) {
-    try { global.conn.ws.close() } catch { }
-    global.conn = {
-      ...global.conn, ...simple.makeWASocket(connectionOptions)
-    }
-  }
-  if (!isInit) {
-    conn.ev.off('messages.upsert', conn.handler)
-    conn.ev.off('group-participants.update', conn.participantsUpdate)
-    conn.ev.off('message.delete', conn.onDelete)
-    conn.ev.off('connection.update', conn.connectionUpdate)
-    conn.ev.off('creds.update', conn.credsUpdate)
-  }
 
   conn.welcome = 'Hai, @user!\nSelamat datang di grup @subject\n\n@desc'
   conn.bye = 'Selamat tinggal @user!'
